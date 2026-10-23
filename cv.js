@@ -1,10 +1,7 @@
 const d=window.PORTFOLIO;const root=document.getElementById('cv-content');function node(tag,text){const e=document.createElement(tag);e.textContent=text;return e;}function section(title,items,render){root.append(node('h2',title));items.forEach(item=>{const a=document.createElement('article');render(a,item);root.append(a);});}
-section('Education',d.education,(a,x)=>{a.append(node('h3',x.school),node('small',x.period),node('p',x.detail));});
-section('Research & Project Experience',d.projects,(a,x)=>{a.append(node('h3',x.title),node('small',x.date),node('p',x.description),node('p','Tools / Equipment: '+x.tags.join(', ')));if(x.details){x.details.forEach(i=>a.append(node('p',i.title+': '+i.text)));}});
-section('Honors & Awards',d.awards,(a,x)=>a.append(node('h3',x.title),node('p',x.detail)));
-section('Selected Coursework',d.courses,(a,x)=>a.append(node('h3',x.name),node('p',x.term+' · '+x.credits+' credits · Grade '+x.grade),node('p',x.focus)));
-section('Early Research · Changwon Science High School',d.earlyResearch,(a,x)=>a.append(node('h3',x.title+' ('+x.year+')'),node('p',x.method),node('p',x.outcome)));
-section('Leadership & Training',d.activities,(a,x)=>a.append(node('h3',x.title),node('small',x.role),node('p',x.text)));
-section('Skills & Languages',d.skills,(a,x)=>a.append(node('p',x.name+': '+x.items)));
-root.append(node('h2','Additional Information'),node('p','Military service: Republic of Korea Army; completed service as a Sergeant (Jul 2022 — Jan 2024).'));
+section('Education',d.education,(a,x)=>{a.append(node('h3',x.school));if(x.department)a.append(node('p',x.department));a.append(node('small',x.period),node('p',x.detail));if(x.gpa)a.append(node('p',x.gpa));});
+section('Selected Projects',d.projects,(a,x)=>{a.append(node('h3',x.title),node('p',x.subtitle),node('small',x.date),node('p',x.description));x.details?.forEach(i=>a.append(node('p',i.title+': '+i.text)));if(x.cad||x.documents)(x.cad||x.documents).forEach(c=>{const p=node('p',c.number+' · '+c.title+' — ');const link=node('a','View report');link.href=c.url;link.target='_blank';link.rel='noopener noreferrer';p.append(link);a.append(p);});});
+section('Undergraduate Research',[d.undergraduateResearch],(a,x)=>{a.append(node('h3',x.lab),node('small',x.period),node('p',x.supervisor+' · '+x.institution),node('p',x.description));x.details.forEach(i=>a.append(node('p',i.title+': '+i.text)));const link=node('a','Lab website');link.href=x.url;link.target='_blank';link.rel='noopener noreferrer';a.append(link);});
+section('Selected Coursework',d.courses,(a,x)=>a.append(node('h3',x.name+' ('+x.korean+')'),node('p',x.term+' · Grade '+x.grade),node('p',x.instructor)));
+section('Honors & Awards',d.awards,(a,x)=>a.append(node('h3',x.title),node('p',x.detail),node('p',x.korean),node('small',x.koreanDetail)));
 document.getElementById('print').addEventListener('click',()=>window.print());
