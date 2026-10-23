@@ -7,3 +7,6 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.project{transition:none}}
 @supports not (backdrop-filter:blur(1px)){header{background:#171b23}.portrait,.project,.award{background-color:#10141c}}
 @media print{body{background:white;color:black}body:before,header,.filters,.project-visual,.portrait,footer{display:none!important}.container{max-width:none;padding:0}.hero{display:block;padding:15px 0}.section{break-inside:avoid;display:block;padding:15px 0}.section-label,.eyebrow,.tag,.muted,.intro,.date,.entry p,.entry li,.project p,.skill span{color:#444}.project,.award,.cv-section .section-content{background:white;box-shadow:none;border:1px solid #ddd}#project-list{display:block}.project{margin:10px 0}.contact a{color:black}}
+
+/* English typography */
+h1{letter-spacing:-1.9px;line-height:1.16;font-weight:600}.intro{line-height:1.9}.project h3{line-height:1.45}.section-label{overflow-wrap:break-word}.entry-top{flex-wrap:wrap}.entry-top .date{white-space:normal}.project .date{white-space:normal}.award h3{line-height:1.55}@media(max-width:650px){h1{font-size:36px;letter-spacing:-1.4px}.section-label{letter-spacing:1.2px}}

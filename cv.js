@@ -4,5 +4,5 @@ section('Research & Project Experience',d.projects,(a,x)=>{a.append(node('h3',x.
 section('Honors & Awards',d.awards,(a,x)=>a.append(node('h3',x.title),node('p',x.detail)));
 section('Selected Coursework',d.resources,(a,x)=>a.append(node('h3',x.title),node('p',x.description)));
 section('Skills & Languages',d.skills,(a,x)=>a.append(node('p',x.name+': '+x.items)));
-root.append(node('h2','Additional Information'),node('p','병역: 육군 병장 만기 전역 (2022.07 — 2024.01)'));
+root.append(node('h2','Additional Information'),node('p','Military service: Republic of Korea Army; completed service as a Sergeant (Jul 2022 — Jan 2024).'));
 document.getElementById('print').addEventListener('click',()=>window.print());

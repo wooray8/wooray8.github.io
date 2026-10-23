@@ -12,7 +12,7 @@ data.interests.forEach(item => append('interests', el('span','tag',item)));
 if (data.cv) append('contact', link('CV ↗',data.cv));
 if (data.email) append('contact',link('Email ↗',`mailto:${data.email}`));
 if (data.github) append('contact',link('GitHub ↗',data.github));
-if (data.photo) { const image = el('img'); image.src = data.photo; image.alt = `${data.name} 프로필`; document.getElementById('portrait').replaceChildren(image); }
+if (data.photo) { const image = el('img'); image.src = data.photo; image.alt = `${data.name} portrait`; document.getElementById('portrait').replaceChildren(image); }
 data.updates.forEach(item => { const row=el('div','update'); row.append(el('span','date',item.date),el('span','',item.text)); append('updates-list',row); });
 function renderProjects(filter='All') {
   document.getElementById('project-list').replaceChildren();
@@ -31,7 +31,7 @@ renderProjects();
 document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click',()=>{
   document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});renderProjects(button.dataset.filter);
 }));
-data.resources.forEach(r=>{const row=el(r.url?'a':'div','resource');if(r.url){row.href=r.url;row.target='_blank';row.rel='noopener noreferrer';}const info=el('div');info.append(el('h3','',r.title),el('p','',r.description));row.append(el('span','resource-type',r.type),info,el('span','resource-status',r.url?'↗':'수강 기록'));append('resource-list',row);});
+data.resources.forEach(r=>{const row=el(r.url?'a':'div','resource');if(r.url){row.href=r.url;row.target='_blank';row.rel='noopener noreferrer';}const info=el('div');info.append(el('h3','',r.title),el('p','',r.description));row.append(el('span','resource-type',r.type),info,el('span','resource-status',r.url?'↗':'Coursework'));append('resource-list',row);});
 data.experience.forEach(x=>{const row=el('article','entry');const top=el('div','entry-top');top.append(el('h3','',x.title),el('span','date',x.period));const list=el('ul');x.details.forEach(d=>list.append(el('li','',d)));row.append(top,el('p','',x.role),list);append('experience-list',row);});
 data.education.forEach(x=>{const row=el('article','entry');const top=el('div','entry-top');top.append(el('h3','',x.school),el('span','date',x.period));row.append(top,el('p','',x.detail));append('education-list',row);});
 data.skills.forEach(s=>{const row=el('div','skill');row.append(el('strong','',s.name),el('span','',s.items));append('skills-list',row);});
