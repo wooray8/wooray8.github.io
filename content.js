@@ -58,21 +58,7 @@ window.PORTFOLIO = {
           "text": "The attached preliminary evaluation reports precision 0.737, recall 0.682, and micro-F1 0.709 on 30 selected normal-condition photographs (17 of 38 classes; confidence 0.25, IoU 0.5). These results do not represent an unfiltered real-world sample. Across all 61 photographs, recall fell to 0.39, with failures concentrated in difficult lighting and backgrounds."
         }
       ],
-      "subtitle": "On-Device AI for Laundry Care Symbols",
-      "documents": [
-        {
-          "number": "REPORT",
-          "title": "Capstone Final Report",
-          "text": "Team report covering the system architecture, implementation, limitations, and individual responsibilities.",
-          "url": "assets/capstone-final-report.pdf"
-        },
-        {
-          "number": "EVALUATION",
-          "title": "Real-Photo Model Evaluation",
-          "text": "Preliminary evaluation on 30 normal-condition photographs, class coverage, error analysis, and limitations.",
-          "url": "assets/capstone-model-evaluation.pdf"
-        }
-      ]
+      "subtitle": "On-Device AI for Laundry Care Symbols"
     },
     {
       "title": "ARES Electronics Team — Rocket Avionics Development",
@@ -103,15 +89,7 @@ window.PORTFOLIO = {
           "text": "Standardized component selection by function, voltage, interface, and price; validated AI-generated comparisons against datasheets and organized verified parts in a searchable Notion database. Planned an integrated sensor/power PCB as a follow-up."
         }
       ],
-      "subtitle": "Aerospace Club · Educational Rocket",
-      "documents": [
-        {
-          "number": "SCHEMATIC",
-          "title": "Educational Rocket Avionics Schematic",
-          "text": "July 2025 circuit diagram showing the controller, sensors, GPS, telemetry, storage, and relay connections.",
-          "url": "assets/ares-avionics-schematic.pdf"
-        }
-      ]
+      "subtitle": "Aerospace Club · Educational Rocket"
     },
     {
       "title": "Digital Integrated Circuit Design — CAD Projects",
@@ -133,39 +111,7 @@ window.PORTFOLIO = {
           "text": "Iterated routing and active-region sharing to satisfy design rules and a sub-4 μm² cell-area target. The final 1-bit cell occupied 3.288 μm² and passed DRC/LVS."
         }
       ],
-      "subtitle": "CAD 1–5 · From CMOS Inverters to SRAM Arrays",
-      "cad": [
-        {
-          "number": "CAD 1",
-          "title": "CMOS Inverters & Ring Oscillators",
-          "text": "Switching thresholds, voltage transfer curves, transistor sizing, and oscillator behavior.",
-          "url": "assets/cad-1.pdf"
-        },
-        {
-          "number": "CAD 2",
-          "title": "Combinational Logic",
-          "text": "Logic-gate schematics, symbols, transient verification, and pull-up/pull-down design.",
-          "url": "assets/cad-2.pdf"
-        },
-        {
-          "number": "CAD 3",
-          "title": "Sequential Circuits",
-          "text": "Transmission-gate flip-flops, pulsed latches, asynchronous control, and layout verification.",
-          "url": "assets/cad-3.pdf"
-        },
-        {
-          "number": "CAD 4",
-          "title": "Arithmetic Circuits",
-          "text": "Carry-select and Sklansky adders, cell-level delay analysis, and schematic/layout design.",
-          "url": "assets/cad-4.pdf"
-        },
-        {
-          "number": "CAD 5",
-          "title": "SRAM Cell & Array",
-          "text": "6T SRAM read/write operation, cell sizing, and integration into a 16 × 16 array.",
-          "url": "assets/cad-5.pdf"
-        }
-      ]
+      "subtitle": "CAD 1–5 · From CMOS Inverters to SRAM Arrays"
     }
   ],
   "education": [
