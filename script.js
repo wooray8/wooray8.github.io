@@ -8,6 +8,7 @@ document.title=`${data.name} — Engineering Portfolio`;
 document.querySelectorAll('[data-name]').forEach(n=>n.textContent=data.name);
 ['role','headline','intro'].forEach(k=>document.getElementById(k).textContent=data[k]);
 data.interests.forEach(t=>append('interests',el('span','tag',t)));
+const projectShortcut=el('a','project-shortcut','View projects ↓');projectShortcut.href='#projects';append('contact',projectShortcut);
 if(data.cv)append('contact',link('CV ↗',data.cv));
 if(data.email)append('contact',link('Email ↗',`mailto:${data.email}`));
 if(data.github)append('contact',link('GitHub ↗',data.github));

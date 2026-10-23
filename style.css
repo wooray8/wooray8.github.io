@@ -24,3 +24,6 @@ h1{letter-spacing:-1.9px;line-height:1.16;font-weight:600}.intro{line-height:1.9
 
 /* Course translations and education hierarchy */
 .course-korean{display:block;margin-top:3px}.entry .education-department{color:#d2dcee;font-size:12px;margin-top:8px}@media print{.entry .education-department{color:#222}}
+
+/* Primary action in the introduction */
+.contact{align-items:center}.contact .project-shortcut{padding:10px 17px;border:1px solid #ccdcff55;border-radius:28px;background:linear-gradient(135deg,#dae5ff,#b6caed);color:#131b2a;font-weight:600;box-shadow:inset 0 1px 0 #ffffff80,0 7px 24px #0003}.contact .project-shortcut:hover{color:#131b2a;filter:brightness(1.08)}@media(max-width:650px){.contact{flex-wrap:wrap;gap:15px 20px}}
