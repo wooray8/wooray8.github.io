@@ -6,26 +6,30 @@
   <meta name="description" content="SiHeon Woo — Engineering portfolio spanning on-device AI, electronics, and semiconductor devices.">
   <meta name="color-scheme" content="dark">
   <title>SiHeon Woo — Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=en-2">
-  <script src="content.js?v=en-2" defer></script>
-  <script src="script.js?v=en-2" defer></script>
+  <link rel="stylesheet" href="style.css?v=portfolio-3">
+  <script src="content.js?v=portfolio-3" defer></script>
+  <script src="script.js?v=portfolio-3" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header><nav class="container" aria-label="Main navigation">
     <a class="brand" href="#" data-name>SiHeon Woo</a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span>☰</span></button>
-    <div id="navigation"><a href="#updates">Updates</a><a href="#projects">Projects</a><a href="#resources">Resources</a><a href="#experience">Experience</a><a href="#cv">CV</a><a class="nav-contact" href="mailto:woosh315@g.skku.edu">Contact ↗</a></div>
+    <div id="navigation"><a href="#updates">Updates</a><a href="#projects">Projects</a><a href="#resources">Coursework</a><a href="#experience">Experience</a><a href="#cv">CV</a><a class="nav-contact" href="mailto:woosh315@g.skku.edu">Contact ↗</a></div>
   </nav></header>
   <main id="main" class="container">
     <section class="hero" aria-labelledby="headline">
       <div><p class="eyebrow" id="role"></p><h1 id="headline"></h1><p class="intro" id="intro"></p><div class="tags" id="interests"></div><div class="contact" id="contact"></div></div>
       <div class="portrait" id="portrait"><div class="orbital" aria-hidden="true"><i></i><i></i><i></i><b>W.</b></div><div class="identity"><span>SiHeon Woo / SKKU</span><small>AI · ELECTRONICS · SEMICONDUCTORS</small></div></div>
     </section>
+    <section class="admission-banner" aria-labelledby="admission-title"><div class="admission-mark" aria-hidden="true">K.</div><div><p class="eyebrow">NEXT CHAPTER / SPRING 2027</p><h2 id="admission-title">Admitted to KAIST</h2><p>M.S. · School of Electrical Engineering</p><small>Admission confirmed September 17, 2026</small></div><span class="admission-status">ADMITTED <span aria-hidden="true">↗</span></span></section>
     <section id="updates" class="section"><div class="section-label">Updates</div><div class="section-content"><h2>Latest updates</h2><div id="updates-list"></div></div></section>
-    <section id="projects" class="section"><div class="section-label">Projects</div><div class="section-content"><div class="section-heading"><div><h2>Selected work</h2><p class="muted">Ideas built. Systems tested. Lessons carried forward.</p></div><div class="filters" role="group" aria-label="Filter projects"><button class="active" data-filter="All" aria-pressed="true">All</button><button data-filter="Application" aria-pressed="false">Application</button><button data-filter="Hardware" aria-pressed="false">Hardware</button><button data-filter="Research" aria-pressed="false">Research</button></div></div><div id="project-list"></div><p id="empty-projects" hidden>No projects in this category yet.</p></div></section>
-    <section id="resources" class="section"><div class="section-label">Resources</div><div class="section-content"><h2>Learning, in practice.</h2><p class="muted">A foundation built through design and experimentation.</p><div id="resource-list"></div></div></section>
+    <section id="projects" class="section"><div class="section-label">Projects</div><div class="section-content"><div class="section-heading"><div><h2>Selected projects</h2><p class="muted">From interface physics to working applications. Explore each project for my contribution and findings.</p></div><div class="filters" role="group" aria-label="Filter projects"><button class="active" data-filter="All" aria-pressed="true">All</button><button data-filter="Application" aria-pressed="false">Application</button><button data-filter="Hardware" aria-pressed="false">Hardware</button><button data-filter="Research" aria-pressed="false">Research</button></div></div><div id="project-list"></div><p id="empty-projects" hidden>No projects in this category yet.</p></div></section>
+    <section id="early-research" class="section"><div class="section-label">Early Research<br>2018 — 2020</div><div class="section-content"><h2>Where curiosity began.</h2><p class="muted">School research at Changwon Science High School — modeling, geometry, and real-world questions.</p><div id="early-list"></div></div></section>
+    <section id="resources" class="section"><div class="section-label">Coursework</div><div class="section-content"><h2>A foundation in devices.</h2><p class="muted">Six selected courses in semiconductor physics, fabrication, and integrated circuits.</p><div class="course-table-wrap"><table class="course-table"><caption>Selected undergraduate coursework · SKKU</caption><thead><tr><th scope="col">Course / Focus</th><th scope="col">Term</th><th scope="col">Credits</th><th scope="col">Grade</th></tr></thead><tbody id="course-list"></tbody></table></div><p class="course-note">Credits and letter grades are shown separately. A+ = 4.5, A = 4.0 on the SKKU 4.5 scale.</p></div></section>
+    <section id="interests-section" class="section"><div class="section-label">Looking Ahead</div><div class="section-content"><h2>Questions I want to pursue.</h2><div id="research-interests"></div></div></section>
     <section id="experience" class="section"><div class="section-label">Experience</div><div class="section-content"><h2>Where I’ve contributed</h2><div id="experience-list"></div><h3 class="subheading">Education</h3><div id="education-list"></div></div></section>
+    <section id="activities" class="section"><div class="section-label">Beyond the Lab</div><div class="section-content"><h2>Building with people.</h2><p class="muted">Leadership, technical training, and shared learning.</p><div id="activity-list"></div></div></section>
     <section id="awards" class="section"><div class="section-label">Honors & Awards</div><div class="section-content"><h2>Recognition along the way</h2><div id="awards-list"></div></div></section>
     <section id="skills" class="section"><div class="section-label">Skills</div><div class="section-content"><h2>The tools behind the work</h2><div id="skills-list"></div></div></section>
     <section id="cv" class="section cv-section"><div class="section-label">Curriculum Vitae</div><div class="section-content"><h2>The full picture.</h2><p class="muted">Education, projects, and experience — in one place.</p><a id="cv-link" class="button" hidden target="_blank" rel="noopener">View CV / Save as PDF <span>↗</span></a><p id="cv-placeholder" class="setup-note">CV coming soon.</p></div></section>
