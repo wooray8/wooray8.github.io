@@ -20,6 +20,7 @@ function renderProjects(filter='All') {
   document.getElementById('empty-projects').hidden = selected.length > 0;
   selected.forEach(p => {
     const card=el('article','project');
+    if(p.visual){const visual=el('div','project-visual '+p.visual);visual.setAttribute('aria-hidden','true');visual.append(el('span','visual-symbol',p.visual==='ai'?'✳':p.visual==='rocket'?'↑':'◇'),el('span','visual-caption',p.label));card.append(visual);}
     if(p.image){const img=el('img');img.src=p.image;img.alt=p.title;img.loading='lazy';card.append(img);}
     const top=el('div','project-top');top.append(el('h3','',p.title),el('span','date',p.date));
     card.append(top,el('p','',p.description),tags(p.tags));
@@ -30,16 +31,13 @@ renderProjects();
 document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click',()=>{
   document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});renderProjects(button.dataset.filter);
 }));
-data.resources.forEach(r=>{const row=el(r.url?'a':'div','resource');if(r.url){row.href=r.url;row.target='_blank';row.rel='noopener noreferrer';}const info=el('div');info.append(el('h3','',r.title),el('p','',r.description));row.append(el('span','resource-type',r.type),info,el('span','resource-status',r.url?'↗':'준비 중'));append('resource-list',row);});
+data.resources.forEach(r=>{const row=el(r.url?'a':'div','resource');if(r.url){row.href=r.url;row.target='_blank';row.rel='noopener noreferrer';}const info=el('div');info.append(el('h3','',r.title),el('p','',r.description));row.append(el('span','resource-type',r.type),info,el('span','resource-status',r.url?'↗':'수강 기록'));append('resource-list',row);});
 data.experience.forEach(x=>{const row=el('article','entry');const top=el('div','entry-top');top.append(el('h3','',x.title),el('span','date',x.period));const list=el('ul');x.details.forEach(d=>list.append(el('li','',d)));row.append(top,el('p','',x.role),list);append('experience-list',row);});
 data.education.forEach(x=>{const row=el('article','entry');const top=el('div','entry-top');top.append(el('h3','',x.school),el('span','date',x.period));row.append(top,el('p','',x.detail));append('education-list',row);});
 data.skills.forEach(s=>{const row=el('div','skill');row.append(el('strong','',s.name),el('span','',s.items));append('skills-list',row);});
 if(data.cv){const a=document.getElementById('cv-link');a.href=data.cv;a.hidden=false;document.getElementById('cv-placeholder').hidden=true;}
 document.getElementById('year').textContent=new Date().getFullYear();
-const themeButton=document.getElementById('theme');
-function setTheme(theme){document.documentElement.dataset.theme=theme;themeButton.replaceChildren(document.createTextNode(theme==='dark'?'☀ ':'☾ '),el('span','',theme==='dark'?'Light':'Dark'));themeButton.setAttribute('aria-label',theme==='dark'?'밝은 테마로 전환':'어두운 테마로 전환');}
-let saved;try{saved=localStorage.getItem('portfolio-theme');}catch{}
-setTheme(saved || (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
-themeButton.addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';setTheme(next);try{localStorage.setItem('portfolio-theme',next);}catch{}});
 const menu=document.querySelector('.menu-toggle');menu.addEventListener('click',()=>{const open=document.getElementById('navigation').classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
 document.querySelectorAll('#navigation a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('navigation').classList.remove('open');menu.setAttribute('aria-expanded','false');}));
+
+data.awards.forEach(a=>{const row=el('article','award');row.append(el('span','award-icon','✧'),el('h3','',a.title),el('p','',a.detail));append('awards-list',row);});
